@@ -23,7 +23,7 @@ console.log(`Computer chose: ${computerSelection}`);
         if (computerSelection === playerSelection) {
             return "It's a tie!"
         }
-        else if ((computerSelection === rock & playerSelection === paper) | (computerSelection === paper & playerSelection === scissors) | (computerSelection === scissors & playerSelection === rock)){
+        else if (((computerSelection === "rock") && (playerSelection === "paper")) || ((computerSelection === "paper") && (playerSelection === "scissors")) || ((computerSelection === "scissors") && (playerSelection === "rock"))) {
             playerScore=playerScore+1
             return "You win this one!!"
         }
@@ -32,4 +32,5 @@ console.log(`Computer chose: ${computerSelection}`);
             return "You lose this one!!"}
     }
     console.log(playRound(playerSelection,computerSelection))
+    console.log(`Your score is ${playerScore} and the machine score is ${computerScore}`)
 }
